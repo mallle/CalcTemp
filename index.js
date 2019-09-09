@@ -19,7 +19,7 @@ function calculateResult(value, from, to){
 
     value = parseFloat(value);
     //celsius to Kelvin
-    if(from === 'c' && to === 'k'){
+    if((from === 'c') && (to === 'k')){
 
         return (value + 273.15).toFixed(2);
 
