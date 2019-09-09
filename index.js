@@ -4,12 +4,12 @@
 let form = $('form');
 let inputFrom = $('input[name="from"]');
 let inputTo = $('input[name="to"]');
-let from = $("#from");
-let to = $("#to");
+let from = $('select[name="from"]');
+let to = $('select[name="to"]');
 let error = $(".error");
 
 /***********************************
- * Methodes
+ * Methods
  **********************************/
 function getResult(){
     inputTo.val(calculateResult(inputFrom.val(), from.val(), to.val()));
@@ -18,6 +18,7 @@ function getResult(){
 function calculateResult(value, from, to){
 
     value = parseFloat(value);
+
     //celsius to Kelvin
     if((from === 'c') && (to === 'k')){
 
@@ -25,44 +26,44 @@ function calculateResult(value, from, to){
 
     }
     //celsius to Fahrenheit
-    if(from === 'c' && to === 'f'){
+    if((from === 'c') && (to === 'f')){
 
         return ((value * (9/5)) + 32).toFixed(2);
 
     }
     //kelvin to celsius
-    if(from === 'k' && to === 'c'){
+    if((from === 'k') && (to === 'c')){
 
         return (value - 273.15).toFixed(2);
 
     }
     //kelvin to Fahrenheit
-    if(from === 'k' && to === 'f'){
+    if((from === 'k') && (to === 'f')){
 
         return ((value - 273.15) + (9/5) + 32).toFixed(2);
 
     }
     //fahrenheit to celsius
-    if(from === 'f' && to === 'c'){
+    if((from === 'f') && (to === 'c')){
 
         return ((value - 32) * (5/9)).toFixed(2);
 
     }
     //fahrenheit to kelvin
-    if(from === 'f' && to === 'k'){
+    if((from === 'f') && (to === 'k')){
 
         return ((value - 32) * (5/9) + 273.15).toFixed(2);
 
     }
 
-}
+    //if from an to is the same scale
+    if((from  === to )){
 
-function changeDisabledField(){
-    $("#to > option").each(function() {
+        return value;
 
-        this.value === from.val() ?  this.disabled = true :  this.disabled = false;
+    }
 
-    });
+    return NaN;
 }
 
 
