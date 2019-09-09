@@ -6,7 +6,6 @@ let inputFrom = $('input[name="from"]');
 let inputTo = $('input[name="to"]');
 let from = $("#from");
 let to = $("#to");
-let result = $(".result");
 let error = $(".error");
 
 /***********************************
