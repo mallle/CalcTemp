@@ -12,7 +12,7 @@ let error = $(".error");
  * Methodes
  **********************************/
 function getResult(){
-    inputTo.val(calculateResult(inputFrom.val(),from.val(), to.val()));
+    inputTo.val(calculateResult(inputFrom.val(), from.val(), to.val()));
 }
 
 function calculateResult(value, from, to){
