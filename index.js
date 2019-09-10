@@ -85,7 +85,3 @@ inputFrom.keyup(function () {
     error.text('Bitte nur Zahlen eingeben');
 
 });
-
-from.change(function () {
-    changeDisabledField();
-});
