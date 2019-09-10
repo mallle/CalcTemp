@@ -5,7 +5,7 @@ let form = $('form');
 let inputFrom = $('input[name="from"]');
 let inputTo = $('input[name="to"]');
 let from = $('select[name="from-unit"]');
-let to = $('select[name="to"]');
+let to = $('select[name="to-unit"]');
 let error = $(".error");
 
 /***********************************
